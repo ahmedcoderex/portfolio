@@ -1,16 +1,99 @@
-# React + Vite
+# 🚀 Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Frontend Developer Portfolio** built with React and Tailwind CSS to showcase my skills, projects, and experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 About The Project
 
-## React Compiler
+This is my personal portfolio website where I present:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* My background as a Frontend Developer
+* My technical skills
+* Selected projects I've built
+* Ways to contact me
 
-## Expanding the ESLint configuration
+The main goal of this project is to demonstrate my ability to build clean, responsive, and high-performance user interfaces.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Built With
+
+* ⚛️ React JS
+* 🎨 Tailwind CSS
+* 🎯 React Icons
+* 🎬 Framer Motion
+* 📜 JavaScript (ES6+)
+
+---
+
+## ✨ Features
+
+* 📱 Fully Responsive Design (Mobile First)
+* 🎨 Clean and Minimal UI
+* 🎬 Smooth Animations using Framer Motion
+* ⚡ Optimized Performance
+* 🧩 Reusable Components Structure
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/        # Images & icons
+├── components/    # Reusable components
+├── sections/      # Page sections (Hero, About, Projects...)
+├── data/          # Static data (projects, skills)
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 📸 Screenshots
+
+![Portfolio Screenshot](./public/portfolioPhoto.webp)
+
+---
+
+## 🔗 Live Demo
+
+https://portfolio-695c6.web.app/
+
+---
+
+## 📬 Contact
+
+* Email: [your-email@example.com](mailto:ahmed.code.rex@gmail.com)
+* GitHub: https://github.com/ahmedcoderex
+* LinkedIn: www.linkedin.com/in/ahmed-mohamed-b54bb336a
+
+---
+
+## 🎯 Future Improvements
+
+* Add Dark Mode 🌙
+* Improve accessibility
+* Add more interactive animations
+* Integrate backend for contact form
+
+---
+
+## 👨‍💻 Author
+
+Ahmed – Frontend Developer
+Focused on building modern, responsive, and user-friendly web applications using React.
+
+---
