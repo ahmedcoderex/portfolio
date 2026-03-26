@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+ font-family: "Inter", sans-serif;
+}
+.container {
+  margin-inline: auto;
+}
+button {
+  cursor: pointer;
+}
+
+.animated-button {
+  animation: animated-button 0.6s linear infinite;
+}
+
+@keyframes animated-button {
+  100% {
+    left: 0;
+  }
+}
+
+.section-settings {
+  padding-top: 44px;
+}
