@@ -18,17 +18,13 @@ function Navbar() {
       className="fixed z-50 w-full top-5"
     >
       <div className="container flex justify-center">
-        <div className="pr-4 flex justify-between items-center bg-white rounded-2xl w-[80%] lg:w-[70%]  xl:w-[60%]">
+        <div className="pr-4  flex justify-between items-center bg-white/70 backdrop-blur-2xl rounded-2xl w-[80%] lg:w-[70%]  xl:w-[60%]">
           <Logo />
 
           {/* NavLinks On disktop */}
           <div className="hidden lg:block">
             <NavLinks />
           </div>
-          {/* NavLinks On mobile */}
-          {openNavLink && (
-            <NavLinks isPhone={true} closeNavLinks={setOpenNavLink} />
-          )}
 
           <div className="flex gap-2 items-center">
             <button
@@ -47,6 +43,11 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* NavLinks On mobile */}
+      {openNavLink && (
+        <NavLinks isPhone={true} closeNavLinks={setOpenNavLink} />
+      )}
     </motion.nav>
   );
 }

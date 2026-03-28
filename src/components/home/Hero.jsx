@@ -18,7 +18,7 @@ function Hero() {
 
   return (
     <section id="hero" className="section-settings relative">
-      <div className="container  relative h-screen flex flex-col items-center justify-end">
+      <div className="container pt-180 md:pt-0  relative h-screen flex flex-col items-center justify-end">
         {/* Main Content */}
         <motion.div
           initial={{ scale: 0, filter: "blur(20px)", opacity: 0 }}
@@ -31,12 +31,12 @@ function Hero() {
             <h1 className="text-2xl md:text-3xl lg:text-4xl ">
               Hi, I'm Ahmed Mohamed
             </h1>
-            <h2 className="relative text-gray-200 text-lg md:text-xl lg:text-2xl mb-3">
+            <h2 className="relative text-gray-200 text-sm md:text-xl lg:text-2xl mb-3">
               <span>Frontend Developer</span>
-              <span className="block animate-pulse absolute top-0 w-46 md:w-52 lg:w-64 h-8 skew-x-18 left-1/2 transform -translate-x-1/2 bg-blue-500  rounded-full -z-10"></span>
+              <span className="block animate-pulse absolute top-0 w-36 md:w-52 lg:w-64 h-6 md:h-7 lg:h-8 skew-x-18 left-1/2 transform -translate-x-1/2 bg-blue-500  rounded-full -z-10"></span>
             </h2>
 
-            <p className="text-xs md:text-sm lg:text-lg w-[70%] mx-auto leading-7">
+            <p className="text-xs md:text-sm lg:text-lg w[95%] md:w-[70%] mx-auto leading-5 md:leading-7">
               {subtitle().map((char, index) => (
                 <motion.span
                   key={index}
