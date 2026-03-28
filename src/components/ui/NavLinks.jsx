@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { IoCloseSharp, IoFlashOutline, IoPersonOutline } from "react-icons/io5";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { Link } from "react-scroll";
+import { themeContext } from "../../contexts/themeContext";
 
 const links = [
   {
@@ -27,6 +29,8 @@ const links = [
 ];
 
 function NavLinks({ isPhone, closeNavLinks }) {
+  const { theme } = useContext(themeContext);
+
   return (
     <nav
       className={`${isPhone && "fixed top-0 left-0 w-full flex-col justify-center backdrop-blur-2xl z-50 gap-4 h-screen"} flex items-center gap-4`}
@@ -49,9 +53,9 @@ function NavLinks({ isPhone, closeNavLinks }) {
           offset={-70}
           activeClass="active"
           onClick={() => {
-            isPhone && closeNavLinks(false)
+            isPhone && closeNavLinks(false);
           }}
-          className={`relative group cursor-pointer py-1 px-2 rounded-2xl ${isPhone ? "text-lg" : "text-sm"}  text-gray-800 gap-1 flex items-center`}
+          className={`relative group cursor-pointer py-1 px-2 rounded-2xl ${isPhone ? "text-lg" : "text-sm"}  ${theme == "dark" ? "text-gray-50" : "text-gray-800"} gap-1 flex items-center`}
         >
           <div className="group-hover:scale-125 transition-all duration-300">
             {icon}
@@ -61,7 +65,9 @@ function NavLinks({ isPhone, closeNavLinks }) {
             {lable}
           </span>
 
-          <span className="absolute -bottom-1 w-0 group-hover:w-[70%] group-[.active]:w-[70%]  transition-all duration-300 bg-gray-600 h-1 left-1/2 transform -translate-1/2"></span>
+          <span
+            className={`absolute -bottom-1 w-0 group-hover:w-[70%] group-[.active]:w-[70%]  transition-all duration-300 ${theme == "dark" ? "bg-gray-50" : "bg-gray-800"}  h-1 left-1/2 transform -translate-1/2`}
+          ></span>
         </Link>
       ))}
     </nav>

@@ -1,6 +1,8 @@
 import { FiGithub } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { useContext } from "react";
+import { themeContext } from "../../contexts/themeContext";
 const connect = [
   {
     to: "https://mail.google.com/mail/?view=cm&fs=1&to=ahmed.code.rex@gmail.com",
@@ -28,9 +30,10 @@ const connect = [
   },
 ];
 function SocialConnect() {
+  const {isDark} = useContext(themeContext)
   return (
     <div>
-      <h3 className="text-gray-700 text-lg mb-6 font-semibold uppercase">
+      <h3 className={`${isDark ? "text-gray-300" : "text-gray-700"} text-lg mb-6 font-semibold uppercase`}>
         Let's Connect
       </h3>
       <ul className="flex flex-col gap-3">
@@ -40,7 +43,7 @@ function SocialConnect() {
               href={to}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-3 text-gray-600 ${hoverColor} transition-all duration-300 transform hover:translate-x-1`}
+              className={`flex items-center gap-3 ${isDark ? "text-gray-400" : "text-gray-600"} ${hoverColor} transition-all duration-300 transform hover:translate-x-1`}
             >
               <span className="text-xl">{icon}</span>
               <span className="text-sm font-medium">{name}</span>

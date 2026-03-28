@@ -1,12 +1,14 @@
 import { MdOutlineFileDownload } from "react-icons/md";
-import Button from "../ui/Button";
 import Logo from "../ui/Logo";
 import NavLinks from "../ui/NavLinks";
 import { IoIosMenu } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { motion } from "motion/react";
+import { themeContext } from "../../contexts/themeContext";
+import ThemeToggle from "../ui/ThemeToggle";
 
 function Navbar() {
+  const { isDark } = useContext(themeContext);
   const [openNavLink, setOpenNavLink] = useState(false);
   return (
     <motion.nav
@@ -18,7 +20,9 @@ function Navbar() {
       className="fixed z-50 w-full top-5"
     >
       <div className="container flex justify-center">
-        <div className="pr-4  flex justify-between items-center bg-white/70 backdrop-blur-2xl rounded-2xl w-[80%] lg:w-[70%]  xl:w-[60%]">
+        <div
+          className={`pr-4  flex justify-between items-center ${isDark ? "bg-gray-700" : "bg-white/70"} backdrop-blur-2xl rounded-2xl w-full lg:w-[70%]  xl:w-[60%]`}
+        >
           <Logo />
 
           {/* NavLinks On disktop */}
@@ -37,8 +41,11 @@ function Navbar() {
               <span>Resum CV</span>
             </button>
 
+              <ThemeToggle />
+   
+
             <button className="lg:hidden" onClick={() => setOpenNavLink(true)}>
-              <IoIosMenu className="text-xl" />
+              <IoIosMenu className={`${isDark? "text-gray-300":"text-gray-900"} text-xl`} />
             </button>
           </div>
         </div>

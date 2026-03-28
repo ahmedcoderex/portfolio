@@ -1,15 +1,15 @@
-import React from "react";
-import Button from "../ui/Button";
-import { FaArrowRight, FaJs } from "react-icons/fa";
-import { BiMailSend } from "react-icons/bi";
+import { FaJs } from "react-icons/fa";
+
 import {
   RiReactjsFill,
   RiSupabaseFill,
   RiTailwindCssFill,
 } from "react-icons/ri";
 import { motion } from "motion/react";
-
+import { useContext } from "react";
+import { themeContext } from "../../contexts/themeContext";
 function Hero() {
+  const { isDark } = useContext(themeContext);
   const subtitle = () => {
     const subtitle =
       "Frontend Developer building modern, responsive web applications, with a strong focus on UI design and performance.";
@@ -28,7 +28,7 @@ function Hero() {
           }}
         >
           <div className="text-center">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl ">
+            <h1 className={`text-2xl md:text-3xl lg:text-4xl ${isDark? "text-gray-200": "text-gray-800"}`}>
               Hi, I'm Ahmed Mohamed
             </h1>
             <h2 className="relative text-gray-200 text-sm md:text-xl lg:text-2xl mb-3">
@@ -36,7 +36,7 @@ function Hero() {
               <span className="block animate-pulse absolute top-0 w-36 md:w-52 lg:w-64 h-6 md:h-7 lg:h-8 skew-x-18 left-1/2 transform -translate-x-1/2 bg-blue-500  rounded-full -z-10"></span>
             </h2>
 
-            <p className="text-xs md:text-sm lg:text-lg w[95%] md:w-[70%] mx-auto leading-5 md:leading-7">
+            <p className={`text-xs md:text-sm lg:text-lg w[95%] md:w-[70%] mx-auto leading-5 md:leading-7 ${isDark? "text-gray-300": "text-gray-700"}`}>
               {subtitle().map((char, index) => (
                 <motion.span
                   key={index}

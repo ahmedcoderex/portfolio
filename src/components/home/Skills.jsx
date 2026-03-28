@@ -14,6 +14,9 @@ import {
 import { motion } from "motion/react";
 import HeadSection from "../ui/HeadSection";
 import { SiAxios, SiFirebase, SiRedux } from "react-icons/si";
+import { useContext } from "react";
+import { themeContext } from "../../contexts/themeContext";
+
 const skills = [
   {
     icon: <FaHtml5 />,
@@ -82,43 +85,72 @@ const skills = [
     shadow: "shadow-[0_0_15px_rgba(242,78,30,0.4)]",
   },
   {
-  icon: <SiFirebase />,
-  name: "Firebase",
-  color: "text-[#FFCA28]",
-  shadow: "shadow-[0_0_15px_rgba(255,202,40,0.5)]",
-}
+    icon: <SiFirebase />,
+    name: "Firebase",
+    color: "text-[#FFCA28]",
+    shadow: "shadow-[0_0_15px_rgba(255,202,40,0.5)]",
+  },
 ];
 
 function Skills() {
+  const { theme } = useContext(themeContext);
+  const isDark = theme === "dark";
+
   return (
-    <section id="skills" className="section-settings">
+    <section
+      id="skills"
+      className={`section-settings ${
+        isDark ? "bg-gray-950" : "bg-white"
+      }`}
+    >
       <div className="container">
         <HeadSection text="Skills" />
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8 gap-y-14 lg:gap-y-14 xl:gap-y-18 mt-18">
           {skills.map(({ icon, name, color, shadow }, index) => (
             <motion.div
+              key={index}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
               viewport={{ once: true }}
-              key={index}
-              className={`relative w-full flex group items-center justify-center gap-2 h-22 md:h-30 lg:h-38 xl:h-42  bg-white cursor-pointer  py-4 rounded-2xl ${shadow}`}
+              className={`relative w-full flex group items-center justify-center gap-2 h-22 md:h-30 lg:h-38 xl:h-42 cursor-pointer py-4 rounded-2xl transition-all duration-300
+              
+              ${
+                isDark
+                  ? "bg-gray-900 hover:bg-gray-800"
+                  : "bg-white hover:bg-gray-50"
+              }
+              
+              ${shadow}`}
             >
+              {/* Icon */}
               <div
                 className={`text-5xl md:text-6xl lg:text-7xl xl:text-8xl ${color}`}
               >
                 {icon}
               </div>
+
+              {/* Tooltip */}
               <h4
-                className={`absolute bg-white rounded-2xl top-1/2 opacity-0 group-hover:opacity-100 transform -translate-y-1/2 group-hover:-top-10 xl:group-hover:-top-12 group-hover:translate-y-0 -z-1 w-full text-center py-1 px-3 transition-all duration-300`}
+                className={`absolute rounded-2xl top-1/2 opacity-0 group-hover:opacity-100 transform -translate-y-1/2 group-hover:-top-10 xl:group-hover:-top-12 group-hover:translate-y-0 w-full text-center py-1 px-3 transition-all duration-300
+                
+                ${
+                  isDark
+                    ? "bg-gray-800 text-white"
+                    : "bg-white text-gray-800"
+                }`}
               >
                 <span
                   className={`${color} text-xs md:text-sm lg:text-lg xl:text-xl font-semibold`}
                 >
                   {name}
                 </span>
+
+                {/* Arrow */}
                 <span
-                  className={`absolute left-1/2 -bottom-1 border-b border-r border-white w-2 h-2 rotate-45 transform -translate-x-1/2`}
+                  className={`absolute left-1/2 -bottom-1 w-2 h-2 rotate-45 transform -translate-x-1/2 border-b border-r
+                  ${isDark ? "border-gray-800" : "border-white"}`}
                 ></span>
               </h4>
             </motion.div>
