@@ -21,7 +21,7 @@ function Navbar() {
     >
       <div className="container flex justify-center">
         <div
-          className={`pr-4  flex justify-between items-center ${isDark ? "bg-gray-700" : "bg-white/70"} backdrop-blur-2xl rounded-2xl w-full lg:w-[70%]  xl:w-[60%]`}
+          className={`pr-4  flex justify-between items-center ${isDark ? "bg-gray-700" : "bg-gray-100"} backdrop-blur-2xl rounded-2xl w-full lg:w-[70%]  xl:w-[60%]`}
         >
           <Logo />
 

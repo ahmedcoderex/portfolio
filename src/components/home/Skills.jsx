@@ -13,7 +13,7 @@ import {
 } from "react-icons/ri";
 import { motion } from "motion/react";
 import HeadSection from "../ui/HeadSection";
-import { SiAxios, SiFirebase, SiRedux } from "react-icons/si";
+import { SiAxios, SiFirebase, SiRedux, SiZulip } from "react-icons/si";
 import { useContext } from "react";
 import { themeContext } from "../../contexts/themeContext";
 
@@ -61,8 +61,8 @@ const skills = [
     shadow: "shadow-[0_0_15px_rgba(90,41,228,0.4)]",
   },
   {
-    icon: <SiRedux />,
-    name: "Redux",
+    icon: <SiZulip />,
+    name: "Zustand",
     color: "text-[#764ABC]",
     shadow: "shadow-[0_0_15px_rgba(118,74,188,0.4)]",
   },

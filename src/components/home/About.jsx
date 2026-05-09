@@ -67,8 +67,8 @@ function About() {
             }`}
           >
             I specialize in building high-performance web applications using
-            <span className="text-blue-400"> React.js</span> and{" "}
-            <span className="text-purple-400">Next.js</span>, with a meticulous
+            <span className="text-blue-400"> React.js</span> 
+        , with a meticulous
             focus on performance and Clean Code. I architect integrated systems
             leveraging the latest technologies to ensure scalability.
           </p>

@@ -7,7 +7,7 @@ function Branding() {
   return (
     <div className="max-w-xs">
       <Logo />
-      <p className={`leading-relaxed ${isDark? "text-gray-300": "text-gray-700"} text-start text-sm mt-4 italic`}>
+      <p className={`leading-relaxed ${isDark? "text-gray-300": "text-gray-700"} text-start text-sm  italic`}>
         "From concept to code.. transforming your passion into a digital reality
         that defines your unique online identity."
       </p>

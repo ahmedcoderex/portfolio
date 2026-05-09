@@ -1,7 +1,16 @@
+import { useContext } from "react";
+import { themeContext } from "../../contexts/themeContext";
+
 function Logo() {
+  const {isDark} = useContext(themeContext)
   return (
-    <section className="flex items-center gap-2 bg-blue-500 text-gray-300 h-14 p-2 rounded-2xl w-fit">
-      <h4 className="text-xs md:text-sm lg:text-lg xl:text-xl">Master</h4>
+    <section className=" p-2 rounded-2xl w-fit cursor-pointer">
+      <h4 className={`text-xl md:text-2xl lg:text-3xl ${isDark ? "text-gray-200" : "text-gray-700"}`}>
+        <span>Apex</span>{" "}
+        <span className="text-sm md:text-lg lg:text-xl text-blue-500 -ml-1">
+          Flow
+        </span>
+      </h4>
     </section>
   );
 }

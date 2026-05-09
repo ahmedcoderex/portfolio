@@ -5,19 +5,19 @@ import { useContext } from "react";
 import { themeContext } from "../../contexts/themeContext";
 const connect = [
   {
-    to: "https://mail.google.com/mail/?view=cm&fs=1&to=ahmed.code.rex@gmail.com",
+    to: "https://mail.google.com/mail/?view=cm&fs=1&to=ahmed.muhamed.tech@gmail.com",
     icon: <BiLogoGmail />,
     name: "Gmail",
     hoverColor: "hover:text-red-500",
   },
   {
-    to: "https://github.com/ahmedcoderex",
+    to: "https://github.com/ahmed-muhamed-tech",
     icon: <FiGithub />,
     name: "GitHub",
     hoverColor: "hover:text-purple-500",
   },
   {
-    to: "https://www.linkedin.com/in/ahmed-mohamed-b54bb336a", // أضفت https://
+    to: "https://www.linkedin.com/in/ahmed-mohamed-b54bb336a/", // أضفت https://
     icon: <FaLinkedinIn />,
     name: "LinkedIn",
     hoverColor: "hover:text-blue-500",
